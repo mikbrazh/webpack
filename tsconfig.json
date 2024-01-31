@@ -4,11 +4,12 @@
         "noImplicitAny": true,
         "module": "ESNext",
         "target": "es5",
-        "jsx": "react",
+        // "jsx": "react",
+        "jsx": "react-jsx",
         "allowJs": true,
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true, // для того, чтобы не писать * при импортах
-        "esModuleInterop": true // // для того, чтобы не писать * при импортах
+        "esModuleInterop": true // // для того, чтобы можно было использовать обычные импорты вместо require (require = commonJs)
         // "removeComments": true,
         // "preserveConstEnums": true,
         // "outFile": "../../built/local/tsc.js",
