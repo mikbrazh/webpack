@@ -1,6 +1,8 @@
-import { ModuleOptions } from "webpack";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export function buildLoaders(): ModuleOptions['rules'] {
+import type { IsDev } from '../types/types';
+
+export function buildLoaders(isDev: IsDev) {
     return [
         // порядок важен
         {
