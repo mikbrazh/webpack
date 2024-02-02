@@ -6,5 +6,6 @@ npm i -D style-loader@3.3.3
 npm i -D css-loader@6.8.1
 npm i -D sass@1.69.0 sass-loader@13.3.2
 npm i -D mini-css-extract-plugin@2.7.6
+npm i react-router-dom@6.16.0
 
 npm run start -- --env port=5500

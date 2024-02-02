@@ -1,14 +1,17 @@
 import path from 'path';
-import webpack from 'webpack';
+import webpack, { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-import type { IsDev } from '../types/types';
+import type {IsDev, BuildOptions } from './types/types';
 
-export function buildPlugins(isDev: IsDev) {
+export function buildPlugins(options: BuildOptions, isDev: IsDev): Configuration['plugins'] {
+
+    const { paths } = options;
+
     return [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../../public', 'index.html'),
+            template: path.resolve(__dirname, paths.html),
         }),
         !isDev && new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',

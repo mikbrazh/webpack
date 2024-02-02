@@ -9,6 +9,7 @@
 // import React from "react"; // начина с 17 версии react можно не импортировать. Но при этом не обходимо указать "jsx": "react-jsx" в tsconfig
 import { createRoot } from "react-dom/client";
 import { App } from "./components/App";
+import { RouterProvider } from "react-router-dom";
 
 const root = document.getElementById('root');
 
@@ -18,4 +19,13 @@ if (!root) {
 
 const container = createRoot(root);
 
-container.render(<App />);
+const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <App />,
+    },
+  ]);
+
+container.render(
+    <RouterProvider router={router} />
+);

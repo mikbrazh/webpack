@@ -1,0 +1,43 @@
+.button {
+    position: relative;
+    background-color: pink;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-color: green;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+    }
+}
+
+.button--blue {
+    position: relative;
+    background-color: lightblue;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-color: green;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+    }
+}
+
+.title {
+    font-size: 32px;
+}
